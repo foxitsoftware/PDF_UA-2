@@ -1,0 +1,3 @@
+$$
+\Delta v_{2\delta}(r)+\psi^{2}(r)-c^{2}v_{2\delta}(r)=0 
+$$

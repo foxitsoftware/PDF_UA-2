@@ -1,0 +1,11 @@
+$$
+f(x)={\frac{a_{0}}{2}}+\sum_{n=1}^{\infty}\left[a_{n}c o s{\frac{n\pi x}{L}}+b_{n}{\frac{n\pi x}{L}}\right] 
+$$
+
+$$
+a_{0}=\int_{\partial{\cal F}}f(x)d x 
+$$
+
+$$
+\begin{array}{c}{{a_{n}=\displaystyle\frac{1}{L}\displaystyle\int_{2L}f\left(x\right)c o s\frac{n\pi x}{L}d x\displaystyle|}}\\ {{b_{n}=\displaystyle\frac{1}{L}\displaystyle\int_{2L}f\left(x\right)s i n\displaystyle\frac{n\pi x}{L}d x}}\end{array} 
+$$

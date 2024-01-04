@@ -1,0 +1,92 @@
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow>
+      <mi>x</mi>
+      <mo stretchy="false">→</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mrow>
+        <msup>
+          <mi>sin</mi>
+          <mn>2</mn>
+        </msup>
+        <mo data-mjx-texclass="NONE">⁡</mo>
+        <mi>x</mi>
+      </mrow>
+    </mfrac>
+    <mo>−</mo>
+    <mfrac>
+      <mn>1</mn>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+    </mfrac>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow>
+      <mi>x</mi>
+      <mo stretchy="false">→</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mn>1</mn>
+      <mo>−</mo>
+      <mi>cos</mi>
+      <mo data-mjx-texclass="NONE">⁡</mo>
+      <mn>2</mn>
+      <mi>x</mi>
+    </mrow>
+    <mrow>
+      <mn>6</mn>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <munder>
+    <mo data-mjx-texclass="OP" movablelimits="true">lim</mo>
+    <mrow>
+      <mi>x</mi>
+      <mo stretchy="false">→</mo>
+      <mn>0</mn>
+    </mrow>
+  </munder>
+  <mfrac>
+    <mrow>
+      <mn>2</mn>
+      <msup>
+        <mi>sin</mi>
+        <mn>2</mn>
+      </msup>
+      <mo data-mjx-texclass="NONE">⁡</mo>
+      <mi>x</mi>
+    </mrow>
+    <mrow>
+      <mn>6</mn>
+      <msup>
+        <mi>x</mi>
+        <mn>2</mn>
+      </msup>
+    </mrow>
+  </mfrac>
+  <mo>=</mo>
+  <mfrac>
+    <mn>1</mn>
+    <mn>3</mn>
+  </mfrac>
+  <mo>.</mo>
+</math>

@@ -1,0 +1,1 @@
+\sqrt{Q^{2}+\mathcal{O}^{2}}

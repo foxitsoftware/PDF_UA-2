@@ -1,0 +1,158 @@
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mtable displaystyle="true" columnspacing="1em" rowspacing="3pt">
+    <mtr>
+      <mtd>
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <mfrac>
+          <msub>
+            <mi>a</mi>
+            <mn>0</mn>
+          </msub>
+          <mn>2</mn>
+        </mfrac>
+        <mo>+</mo>
+        <munderover>
+          <mo data-mjx-texclass="OP">∑</mo>
+          <mrow>
+            <mi>n</mi>
+            <mo>=</mo>
+            <mn>1</mn>
+          </mrow>
+          <mrow>
+            <mi mathvariant="normal">∞</mi>
+          </mrow>
+        </munderover>
+        <mrow data-mjx-texclass="INNER">
+          <mo data-mjx-texclass="OPEN">[</mo>
+          <msub>
+            <mi>a</mi>
+            <mi>n</mi>
+          </msub>
+          <mi>cos</mi>
+          <mo data-mjx-texclass="NONE">⁡</mo>
+          <mfrac>
+            <mrow>
+              <mi>n</mi>
+              <mi>π</mi>
+              <mi>x</mi>
+            </mrow>
+            <mi>L</mi>
+          </mfrac>
+          <mo>+</mo>
+          <msub>
+            <mi>b</mi>
+            <mi>n</mi>
+          </msub>
+          <mfrac>
+            <mrow>
+              <mi>n</mi>
+              <mi>π</mi>
+              <mi>x</mi>
+            </mrow>
+            <mi>L</mi>
+          </mfrac>
+          <mo data-mjx-texclass="CLOSE">]</mo>
+        </mrow>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <msub>
+          <mi>a</mi>
+          <mn>0</mn>
+        </msub>
+        <mo>=</mo>
+        <msub>
+          <mo data-mjx-texclass="OP">∫</mo>
+          <mrow>
+            <mn>2</mn>
+            <mi>L</mi>
+          </mrow>
+        </msub>
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mi>d</mi>
+        <mi>x</mi>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <msub>
+          <mi>a</mi>
+          <mi>n</mi>
+        </msub>
+        <mo>=</mo>
+        <mfrac>
+          <mn>1</mn>
+          <mi>L</mi>
+        </mfrac>
+        <msub>
+          <mo data-mjx-texclass="OP">∫</mo>
+          <mrow>
+            <mn>2</mn>
+            <mi>L</mi>
+          </mrow>
+        </msub>
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mi>cos</mi>
+        <mo data-mjx-texclass="NONE">⁡</mo>
+        <mfrac>
+          <mrow>
+            <mi>n</mi>
+            <mi>π</mi>
+            <mi>x</mi>
+          </mrow>
+          <mi>L</mi>
+        </mfrac>
+        <mi>d</mi>
+        <mi>x</mi>
+        <mo stretchy="false">∣</mo>
+      </mtd>
+    </mtr>
+    <mtr>
+      <mtd>
+        <msub>
+          <mi>b</mi>
+          <mi>n</mi>
+        </msub>
+        <mo>=</mo>
+        <mfrac>
+          <mn>1</mn>
+          <mi>L</mi>
+        </mfrac>
+        <msub>
+          <mo data-mjx-texclass="OP">∫</mo>
+          <mrow>
+            <mn>2</mn>
+            <mi>L</mi>
+          </mrow>
+        </msub>
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>x</mi>
+        <mo stretchy="false">)</mo>
+        <mi>sin</mi>
+        <mo data-mjx-texclass="NONE">⁡</mo>
+        <mfrac>
+          <mrow>
+            <mi>n</mi>
+            <mi>π</mi>
+            <mi>x</mi>
+          </mrow>
+          <mi>L</mi>
+        </mfrac>
+        <mi>d</mi>
+        <mi>x</mi>
+      </mtd>
+    </mtr>
+  </mtable>
+</math>

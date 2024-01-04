@@ -1,0 +1,3 @@
+$$
+{\frac{d f}{d t}}=\operatorname*{lim}_{h\to0}{\frac{f(t+h)-f(t)}{h}} 
+$$

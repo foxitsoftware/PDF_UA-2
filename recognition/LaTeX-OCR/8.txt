@@ -1,0 +1,1 @@
+\scriptstyle f(x)={\frac{a_{x}}{2}}+{\frac{\pi}{a_{1}}}{\bigg[}a_{x}=0{\frac{m\pi}{L}}+b_{x}{\frac{n\pi}{L}}+b_{x}{\frac{m\pi}{L}}{\bigg]}
