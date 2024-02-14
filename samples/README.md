@@ -18,7 +18,7 @@
 - First Formula without Lbl (works)
 - FENote with Ref
 
-#Sample AF Math(1.6).pdf
+# Sample AF Math(1.6).pdf
 - 1.6 file
 - no namespace
 - AF on Formula as dictionary (invalid)
