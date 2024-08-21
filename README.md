@@ -1,52 +1,81 @@
-# PDF_UA-2
+# PDF/UA-2
 ISO 14289-2 (PDF/UA-2) significantly improves the accessibility of PDF. Foxit's PoC implementation of various PDF creation and consumption tools
 
-We provide [Installer](installer/README.md) to our PoC implementations.
+We provide [Installer](installer/README.md) for our PoC implementations.
 The [PDF Sample files](samples/README.md) we produced to achieve interoperability
 
 We are testing several AI approaches to help with automatic math recognition as a part of remediation processes. The results of our discoveries can be found here:
 [Recognition](recognition/Readme.md)
 
-If you are interested in interoperable testing, have comments, or want to report a bug or suggestion, please use the Issues feature on github.
+If you are interested in interoperable testing, have comments, or want to report a bug or suggestion, please use the Issues feature on GitHub.
 
 # PDF 2.0 and PDF/UA-2 features
 
-The ISO 32000-2:2020 (PDF 2.0) specification only provides file format requirements. It should give clear guidance for PDF creation tools. What should and should not be present in the compliant file, but is not clear how the processor should use all those information. We use this github repository to explain our reasoning with implementations and sample files so we can reach a consensus with other developers. It is essential to give end users the same experience when consuming PDF UA-2 files through AT tools.
+The ISO 32000-2:2020 (PDF 2.0) specification only provides file format requirements. It should give clear guidance for PDF creation tools. What should and should not be present in the compliant file, but it is not clear how the processor should use all that information. We use this GitHub repository to explain our reasoning with implementations and sample files so we can reach a consensus with other developers. It is essential to give end users the same experience when consuming PDF UA-2 files through AT tools.
 
 The following sections explain our implementation decisions. Feel free to comment.
 
 ## MathML
 
 PDF 2.0 in conjunction with PDF/UA-2 recognizes two methods of semantically denote math. Both methods require the use of *Formula* structure element and then:
-- use \<mathml\> elements in MathML namespace as direct child 
-- or the associate MathML data in *AF* property of structure element
+- Use \<mathml\> elements in the MathML namespace as direct children 
+- or the associated MathML data in the *AF* property of the structure element
 
 In our PoC we use the second option.  
  
+## Logic in providing Associated file linky na well tagged ua2
 
-## Logic in providing Associated file
-
-PDF 2.0 doesn't provide any guidance when it comes to processors, so it's not specified how a Reader should deal with specific scenarios. 
+PDF 2.0 doesn't provide any guidance regarding processors, so it's not specified how a processor should deal with specific scenarios. 
 
 Our algorithm when processing PDF files with *AF* is as follows:
 
 For *Formula* structure element:
-- Search only AFs with *AFRelationship* == *Supplement* (as per PDF/UA-2)
-- accepting *AF* as a directory as well as an array (PDF 2.0 only allows arrays, but we noticed files with AF as a dictionary)
-- if no *AF* entry with *Supplement* exists, we are processing kids of structure element
-- ignoring the media type of the associated file (todo)
-- if we find suitable *AF*, then substructure is ignored and the content of stream data is provided as a textual value
+1. **Search Criteria:**
+   - Focus only on AFs where `AFRelationship == Supplement` (as per PDF/UA-2).
+   - Ensure that the `Mediatype` (Subtype key) is `application/mathml+xml`.
+     - *Note:* The Mediatype comparison is currently a string match, with ongoing discussions in the community about potential variations in the key.
 
-### Known issues
-- Substructure is ignored if AF exists, therefore *Lbl* structure element with it's content might get lost
+2. **AF Structure Handling:**
+   - Accept both arrays and directories for AF. While PDF 2.0 officially allows only arrays, some files use AF as a dictionary.
+   - - Only the first element that meets the criteria is used
 
-## *RoleMapNS*
-Currently, we only check for *RoleMapNS* if the document is marked as 2.0 (header must be 2.0 !)
-Our tools don't check namespaces. 
-If the file is 2.0, then *RoleMapNS* is the preferred method, no matter what structure element we encounter.
+3. **Fallback Mechanism:**
+   - If no suitable AF entry is found proceed to process the children (kids) of the structure element.
+   - If Formula doesn’t have NS == 2.0 then the old processing is used.
 
-## Use of *ActualText* property
-If *ActualText* is present we ignore AFs and substructure. *ActualText* serves as a full replacement of structure element (this is true for all structure elements. **Formula** is no different)
+4. **Unimplemented Features:**
+   - `AFRelationship == Alternative` is not yet implemented. The usage of this key is currently under discussion.
 
+5. **Priority Rules:**
+   - `ActualText` takes precedence over the processing of the structure element itself.
+   - `AF` has priority over `Alt`.
 
+6. **Substructure Handling:**
+   - If a suitable `AF` is found, process the substructure of the element and provide the content of the stream data as the textual value, i.e. only that content is replaced, not the substructure.
+   - If `ActualText` is present we ignore AFs and substructure. `ActualText` serves as a full replacement of structure element (this is true for all structure elements. `Formula` is no different)
 
+7. **Content Delivery:**
+   - If the`Forrmula` is in 2.0 namespace and contains the correct associated file.
+     - Provide the content of that associated file.
+   - Otherwise, if `Alt` is present.
+     - Provide `Alt`.
+   - If neither condition is met.
+     - Provide the content associated with the `Formula` element.
+
+## *Rolemap and RolemapNS Processing*
+
+1. **General Rolemap Handling:**
+   - Process the `Rolemap` or `RolemapNS` on a Structure Element (SE) in a PDF, regardless of the PDF version.
+
+2. **Namespace (NS) Check:**
+   - If the SE does **not** have a Namespace (NS), check the `Rolemap`.
+   - If the SE **does** have an NS and it is other than `PDF 1.7`, `PDF 2.0`, or `MathML`, check `RolemapNS`.
+
+3. **Custom Element Mapping:**
+   - Allow mapping of a single custom element into two different standard elements based on `RolemapNS`.
+
+4. **Backward Compatibility:**
+   - If the *Formula* element does not have `NS == 2.0`, then revert to the old processing method. This is our backward-compatible hack since older processors won’t check the NS.
+
+5. **Namespace Flexibility:**
+   - Elements could be in any namespace (e.g., LaTeX). The discussion of `NS == 2.0` occurs after rolemapping (i.e., `RolemapNS`).
