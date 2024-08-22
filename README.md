@@ -23,7 +23,7 @@ PDF 2.0 in conjunction with PDF/UA-2 recognizes two methods of semantically deno
 
 In our PoC we use the second option.  
  
-## Logic in providing Associated file linky na well tagged ua2
+## Logic in providing Associated file
 
 PDF 2.0 doesn't provide any guidance regarding processors, so it's not specified how a processor should deal with specific scenarios. 
 

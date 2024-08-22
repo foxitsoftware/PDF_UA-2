@@ -32,16 +32,13 @@
 1. **AF with Supplement and Media Type is in Mixed Upper and Lowercase (`*APPLICATION/mathml+xml)`):**
    - **Expected Result:** Should return the content of the first AF in the array. The media type is case insensitive.
    - **Value:** \<math\> \<mi\>&#x1d44e;\</mi\> \<mo\>&#x2062;\</mo\> \<msup\> \<mi\>&#x1d465;\</mi\> \<mn\>2\</mn\> \</msup\> \<mo\>+\</mo\> \<mi\>&#x1d44f;\</mi\> \<mo\>&#x2062;\</mo\> \<mi\>&#x1d465;\</mi\> \<mo\>+\</mo\> \<mi\>&#x1d450;\</mi\> \<mo\>=\</mo\> \<mn\>0\</mn\> \</math\>
-2. **Two AFs. One with Source, One with Supplement.**  
-   The Source with media type `application/mathml+xml` and Supplement with `application/x-tex`. No Alt present.
+2. **Two AFs. One with Source, One with Supplement. The Source with media type `application/mathml+xml` and Supplement with `application/x-tex`. No Alt present.**
    - **Expected Result:**  No AF meets criteria. No Alt present. It should return the content items under Formula structure element.
    - **Value:** 𝑥=−𝑏±√𝑏2−4𝑎𝑐2𝑎
-3. **Two AFs. One with Source, One with Supplement.**  
-   Both don't have the correct media type, no Alt present.
+3. **Two AFs. One with Source, One with Supplement. Both don't have the correct media type, no Alt present.**
    - **Expected Result:** No AF meets criteria. No Alt present. It should return the content items under Formula structure element.
    - **Value:** |−1|=1
-4. **Two AFs. One with Source, One with Alternative.**  
-   Alternative with the correct media type.
+4. **Two AFs. One with Source, One with Alternative. Alternative with the correct media type.**
    - **Expected Result:**  Alternative is not defined yet.
    - **Value:** (1234)(1101)=(1337)
 5. **Two AFs Both Meet Criteria, Alt Present.**
