@@ -54,13 +54,25 @@ For *Formula* structure element:
    - If a suitable `AF` is found, process the substructure of the element and provide the content of the stream data as the textual value, i.e. only that content is replaced, not the substructure.
    - If `ActualText` is present we ignore AFs and substructure. `ActualText` serves as a full replacement of structure element (this is true for all structure elements. `Formula` is no different)
 
-7. **Content Delivery:**
-   - If the`Forrmula` is in 2.0 namespace and contains the correct associated file.
-     - Provide the content of that associated file.
-   - Otherwise, if `Alt` is present.
-     - Provide `Alt`.
-   - If neither condition is met.
-     - Provide the content associated with the `Formula` element.
+7. **Processing Formula Pseudocode**
+```pseudo
+IF ActualText is present THEN
+    // Ignore AFs and substructures, and provide ActualText
+    Provide ActualText
+
+ELSE IF AF is present AND Namespace == 2.0 AND AFRelationship == Supplement AND Mediatype == application/mathml+xml THEN 
+   // Only the first element that meets the criteria is used
+   // Process the substructure and provide the stream data content as textual value
+   Provide stream data content, replacing content but not substructure
+   
+ELSE IF Alt is present THEN
+    // Provide Alt
+    Provide Alt
+
+ELSE
+    // Process the substructure of the element
+    Proved content and process substructure
+```
 
 ## *Rolemap and RolemapNS Processing*
 
