@@ -1,33 +1,8 @@
-## **math-tag (2.0).pdf**
-- **PDF Header:** 2.0
-- **Namespace on Structure Elements:** 2.0
-- **AF on Formula:** With `AFRelationship == Alternative` (against PDF/UA-2 standards)
-- **Namespace:** LaTeX
-- **RoleMapNS:** Used
-
-## **Variance - Wikipedia - Tagged - AF - Ref(OBJR) - NS.pdf**
-- **PDF Header:** 2.0
-- **Namespace on Structure Elements:** 2.0
-- **AF on Formula:** With `AFRelationship == Supplement`
-- **First Formula:** Contains `Lbl` (Reference to `FENote`)
-- **FENote:** Contains Reference
-
-## **No Lbl Variance - Wikipedia - Tagged - AF - Ref(OBJR) - NS.pdf**
-- **PDF Header:** 1.6
-- **Namespace on Structure Elements:** 2.0
-- **AF on Formula:** With `AFRelationship == Supplement`
-- **First Formula:** Without `Lbl` (works)
-- **FENote:** Contains Reference
-
-## **Sample AF Math(1.6).pdf**
-- **PDF Header:** 1.6
-- **Namespaceon Structure Elements:** None
-- **AF on Formula:** As a dictionary (invalid structure)
-- **AFRelationship:** Supplement
-
-## mathml-AF-complex test.pdf
+## **mathml-AF-complex test.pdf**
 ### Each Formula is Supposed to Contain a Specific Problem:
 (It is also important to mention that all the techniques are fully compatible with PDF/UA-2, Well Tagged PDF and ready for Derivation to HTML)
+
+[//]: # (This is a test comment)
 
 1. **Two AFs, One with Source, other with Supplement and Media Type is in Mixed Upper and Lowercase `APPLICATION/mathml+xml`. No Alt present:**
    - **Formula:** 𝑎𝑥2 + 𝑏𝑥 + 𝑐 = 0
@@ -106,5 +81,12 @@
    - - **2.**
    - - - **Relationship:** Source
    - - - **Subtype:** application/x-tex
-   - **Expected Result:** Under math is Lbl with additional content.
+   - **Expected Result:** Should return the content of the first AF in the array. Process the substructure, under math is Lbl with additional content.
    - - **Value:** \<math\> \<mi\>&#x1d465;\</mi\> \<mo\>=\</mo\> \<mi\>&#x1d466;\</mi\> \<mo\>=\</mo\> \<mn\>1\</mn\> \</math\>
+
+## **Variance - Wikipedia - Tagged - AF - Ref(OBJR) - NS.pdf**
+- **PDF Header:** 2.0
+- **Namespace on Structure Elements:** 2.0
+- **AF on Formula:** With `AFRelationship == Supplement`
+- **First Formula:** Contains `Lbl` (Reference to `FENote`)
+- **FENote:** Contains Reference
