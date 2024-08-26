@@ -5,7 +5,7 @@ We provide [Installer](installer/README.md) for our PoC implementations.
 The [PDF Sample files](samples/README.md) we produced to achieve interoperability
 
 We are testing several AI approaches to help with automatic math recognition as a part of remediation processes. The results of our discoveries can be found here:
-[Recognition](recognition/Readme.md)
+[Recognition](recognition/README.md)
 
 If you are interested in interoperable testing, have comments, or want to report a bug or suggestion, please use the Issues feature on GitHub.
 
