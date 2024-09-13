@@ -32,7 +32,7 @@ The NVDA build that is compatible with our PDDom implementation is provided and 
 and can be downloaded here: git@github.com:NSoiffer/nvda.git
 
 Direct link to installer:
-[updated NVDA](https://foxitpdf-my.sharepoint.com/:u:/g/personal/roman_toda_foxitsoftware_com/EX3Qnbzbt-xPrglRcZu0YGsBzCEZ3rc87zNaBo2e-LZ_DA?e=yBGRj5)
+[updated NVDA](https://foxitpdf-my.sharepoint.com/:u:/g/personal/roman_toda_foxitsoftware_com/ESm3Xy3qt8FDok6ZbACnUdgBfYc7JWKE115cVDckr7KSEg?e=2iao8L)
 
 # Implementation Testing Guide
 
