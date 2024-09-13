@@ -2,7 +2,7 @@
 ISO 14289-2 (PDF/UA-2) significantly improves the accessibility of PDF. Foxit's PoC implementation of various PDF creation and consumption tools
 
 We provide [Installer](installer/README.md) for our PoC implementations.
-The [PDF Sample files](samples/README.md) we produced to achieve interoperability
+The [PDF Sample files](samples/README.md) we produced to achieve interoperability.
 
 We are testing several AI approaches to help with automatic math recognition as a part of remediation processes. The results of our discoveries can be found here:
 [Recognition](recognition/README.md)
@@ -47,20 +47,18 @@ For *Formula* structure element:
    - `AFRelationship == Alternative` is not yet implemented. The usage of this key is currently under discussion.
 
 5. **Priority Rules:**
-   - `ActualText` takes precedence over the processing of the structure element itself.
    - `AF` has priority over `Alt`.
+   - `Alt` has priority over `ActualText`
 
-6. **Substructure Handling:**
+[//]: # (`ActualText` takes precedence over the processing of the structure element itself.)
+
+1. **Substructure Handling:**
    - If a suitable `AF` is found, process the substructure of the element and provide the content of the stream data as the textual value, i.e. only that content is replaced, not the substructure.
-   - If `ActualText` is present we ignore AFs and substructure. `ActualText` serves as a full replacement of structure element (this is true for all structure elements. `Formula` is no different)
+   - ~~If `ActualText` is present we ignore AFs and substructure. `ActualText` serves as a full replacement of structure element (this is true for all structure elements. `Formula` is no different)~~
 
-7. **Processing Formula Pseudocode**
+2. **Processing Formula Pseudocode**
 ```pseudo
-IF ActualText is present THEN
-    // Ignore AFs and substructures, and provide ActualText
-    Provide ActualText
-
-ELSE IF AF is present AND Namespace == 2.0 AND AFRelationship == Supplement AND Mediatype == application/mathml+xml THEN 
+IF AF is present AND Namespace == 2.0 AND AFRelationship == Supplement AND Mediatype == application/mathml+xml THEN 
    // Only the first element that meets the criteria is used
    // Process the substructure and provide the stream data content as textual value
    Provide stream data content, replacing content but not substructure
@@ -69,9 +67,13 @@ ELSE IF Alt is present THEN
     // Provide Alt
     Provide Alt
 
+ELSE IF ActualText is present THEN
+   // Ignore AFs and substructures, and provide ActualText
+   Provide ActualText
+
 ELSE
     // Process the substructure of the element
-    Proved content and process substructure
+    Provide content and process substructure
 ```
 
 ## *Rolemap and RolemapNS Processing*
