@@ -4,10 +4,12 @@ Installers for the latest PoCs of our tools are not hosted in this repository.
 Links lead to external OneDrive folder
 
 ## Reader
-**[UA-2 PoC Foxit Reader.exe](https://foxitpdf-my.sharepoint.com/:u:/g/personal/roman_toda_foxitsoftware_com/EfcLt62w7wNKkRzeVznw3ukBclPGk36SliUi0X8Qf59T8g?e=DIehPs)** 
+
+*01.10.2024*
+starting with 2023.3 version [PDF Reader](https://www.foxit.com/pdf-reader/) supports all features introduced in previously tested PoCs
 
 *21.08.2024*
-code name: GA_PDFReader_AllLang_Online_Bundle_v2024.3.0.26537.exe
+code name: **[GA_PDFReader_AllLang_Online_Bundle_v2024.3.0.26537.exe](https://foxitpdf-my.sharepoint.com/:u:/g/personal/roman_toda_foxitsoftware_com/EfcLt62w7wNKkRzeVznw3ukBclPGk36SliUi0X8Qf59T8g?e=DIehPs)** 
 - Support for PDF 2.0 namespaces
 - Support for *RoleMapNS*
 - PDDom update
@@ -15,10 +17,10 @@ code name: GA_PDFReader_AllLang_Online_Bundle_v2024.3.0.26537.exe
 
 ## Custom Foxit Editor (Experimental features)
 
-**[UA-2 PoC Foxit Editor.msi](https://foxitpdf-my.sharepoint.com/:u:/g/personal/roman_toda_foxitsoftware_com/EcVqgZ39oaBOoZJAENKTPMwBAEDOwUquOqX1QH3eO471Mg?e=52sIKZ)** 
+**[UA-2 PoC Foxit Editor.msi
 
 *8.12.2023*
-code name: GA_PDFEditor_En_Online_Full_Continuous_v2024.1.0.23037_Continuous.msi
+code name: **[GA_PDFEditor_En_Online_Full_Continuous_v2024.1.0.23037_Continuous.msi](https://foxitpdf-my.sharepoint.com/:u:/g/personal/roman_toda_foxitsoftware_com/EcVqgZ39oaBOoZJAENKTPMwBAEDOwUquOqX1QH3eO471Mg?e=52sIKZ)** 
 
 - Add Structured Destination
 - Set *Ref* entry
