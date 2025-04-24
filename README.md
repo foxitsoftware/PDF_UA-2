@@ -28,11 +28,12 @@ PDF 2.0 in conjunction with PDF/UA-2 recognizes two methods of semantically deno
 
 In our PoC we use the second option.  
 
-## A sammple of a formula and associated file
+## A sample of a formula and associated file
 ![Sample of a formula](https://raw.githubusercontent.com/foxitsoftware/PDF_UA-2/main/samples/Simple%20formula.jpg)
 
 <img src="https://raw.githubusercontent.com/foxitsoftware/PDF_UA-2/main/samples/MathML%20sample.jpg" alt="MathML" width="500">
 
+<img src="https://raw.githubusercontent.com/foxitsoftware/PDF_UA-2/main/samples/MathML%20sample.jpg" alt="MathML" width="500">
  
 ## Logic in providing Associated file
 
