@@ -1,5 +1,5 @@
 # PDF/UA-2 — PDF for Universal Accessibility, ver. 2, ISO 14289-2
-Key points:
+Key points of UA-2:
 - Enhanced Accessibility
 - Semantic Information
 - Compatibility with WCAG
