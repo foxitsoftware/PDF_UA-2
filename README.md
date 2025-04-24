@@ -33,6 +33,8 @@ In our PoC we use the second option.
 
 <img src="https://raw.githubusercontent.com/foxitsoftware/PDF_UA-2/main/samples/MathML%20sample.jpg" alt="MathML" width="500">
 
+## This is how you can meet MathML in special Foxit Editor build
+
 <img src="https://raw.githubusercontent.com/foxitsoftware/PDF_UA-2/main/samples/Foxit%20Screen%20with%20MathML.jpg" alt="MathML" width="500">
 
  
