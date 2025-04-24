@@ -31,18 +31,7 @@ In our PoC we use the second option.
 ## A sammple of a formula and associated file
 ![Sample of a formula](https://raw.githubusercontent.com/foxitsoftware/PDF_UA-2/main/samples/Simple%20formula.jpg)
 
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-  <mrow>
-    <mn>2</mn>
-    <mi>x</mi>
-    <mo>+</mo>
-    <mi>y</mi>
-    <mo>=</mo>
-    <mn>3</mn>
-  </mrow>
-</math>
-
-
+<img src="https://raw.githubusercontent.com/foxitsoftware/PDF_UA-2/main/samples/MathML%20sample.jpg" alt="MathML" width="500">
 
  
 ## Logic in providing Associated file
