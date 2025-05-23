@@ -5,6 +5,7 @@
 
 <!-- This is a test comment -->
 **Exposed AF example**
+
 1. **Two AFs: One with `Source`, one with `Supplement`. Media type is mixed-case `APPLICATION/mathml+xml`. No Alt present.**
    - **Formula:** 𝑎𝑥² + 𝑏𝑥 + 𝑐 = 0
    - **AFs:**
@@ -21,6 +22,7 @@
      ```
 ---
 **Not exposed AF - content exposed**
+
 2. **Two AFs: `Source` with `application/mathml+xml`, `Supplement` with `application/x-tex`. No Alt present.**
    - **Formula:** 𝑥 = −𝑏 ± √(𝑏²−4𝑎𝑐) / 2𝑎
    - **AFs:**
@@ -34,6 +36,7 @@
    - **Value:** 𝑥 = −𝑏 ± √(𝑏²−4𝑎𝑐) / 2𝑎
 ---
 **Not exposed AF - content exposed**
+
 3. **Two AFs: Both have incorrect media types. No Alt present.**
    - **Formula:** |−1| = 1
    - **AFs:**
@@ -47,6 +50,7 @@
    - **Value:** |−1| = 1
 ---
 **Not exposed AF - content exposed**
+
 4. **Two AFs: `Source` and `Alternative`. `Alternative` has the correct media type. No Alt present.**
    - **Formula:** (1234)(1101) = (1337)
    - **AFs:**
@@ -60,6 +64,7 @@
    - **Value:** (1234)(1101) = (1337)
 ---
 **Exposed AF despite Alt present**
+
 5. **Two AFs: Both meet criteria. Alt is present.**
    - **Formula:** sin²𝜃 + cos²𝜃 = 1
    - **AFs:**
@@ -77,6 +82,7 @@
      ```
 ---
 **Not exposed AF, Alt taken instead**
+
 6. **Two AFs: None meet criteria. Alt is present.**
    - **Formula:** 2𝑥 + 𝑦 = 3; 𝑥 − 𝑦 = 0
    - **AFs:**
@@ -91,6 +97,7 @@
    - **Value:** Alternate
 ---
 **Exposed AS + substructure to be processed**
+
 7. **Two AFs: One meets criteria. No Alt, but substructure present (e.g., `Lbl` with content ‘.’).**
    - **Formula:** 𝑥 = 𝑦 = 1
    - **AFs:**
