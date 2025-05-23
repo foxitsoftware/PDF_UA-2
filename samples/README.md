@@ -4,8 +4,8 @@
 *All techniques are fully compatible with PDF/UA-2, Well-Tagged PDF, and ready for derivation to HTML.*
 
 <!-- This is a test comment -->
-
-1. **Exposed AF example, two AFs: One with `Source`, one with `Supplement`. Media type is mixed-case `APPLICATION/mathml+xml`. No Alt present.**
+**Exposed AF example**
+1. **Two AFs: One with `Source`, one with `Supplement`. Media type is mixed-case `APPLICATION/mathml+xml`. No Alt present.**
    - **Formula:** 𝑎𝑥² + 𝑏𝑥 + 𝑐 = 0
    - **AFs:**
      - **1.**
