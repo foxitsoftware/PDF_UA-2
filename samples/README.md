@@ -35,7 +35,7 @@
    - **Expected Result:** No AF meets criteria. No Alt present. Content under Formula structure should be returned.
    - **Value:** 𝑥 = −𝑏 ± √(𝑏²−4𝑎𝑐) / 2𝑎
 
-## **ℹℹ️Not exposed AF — content exposed**
+## **ℹ️Not exposed AF — content exposed**
 
 3. **Two AFs: Both have incorrect media types. No Alt present.**
    - **Formula:** |−1| = 1
@@ -112,6 +112,7 @@
      ```xml
      <math> <mi>&#x1d465;</mi> <mo>=</mo> <mi>&#x1d466;</mi> <mo>=</mo> <mn>1</mn> </math>
      ```
+
 
 
 ## **Variance - Wikipedia - Tagged - AF - Ref(OBJR) - NS.pdf**
