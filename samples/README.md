@@ -115,10 +115,10 @@
 
 | # | Description | Formula | AFs | Alt | Expected Result | Value |
 |---|-------------|---------|-----|-----|-----------------|-------|
-| 1 | Exposed AF, two AFs: Source + Supplement (media type in mixed-case). No Alt. | 𝑎𝑥² + 𝑏𝑥 + 𝑐 = 0 | Supplement: `APPLICATION/mathml+xml`<br>Source: `application/x-tex` | – | First AF is used. Media type is case-insensitive. | `<math> <mi>...</mi> ... </math>` |
-| 2 | Not exposed AF - fallback to content. Two AFs: Source (mathml), Supplement (tex). No Alt. | 𝑥 = −𝑏 ± √(𝑏²−4𝑎𝑐)/2𝑎 | Source: `application/mathml+xml`<br>Supplement: `application/x-tex` | – | No AF qualifies. Formula content is used. | 𝑥 = −𝑏 ± √(𝑏²−4𝑎𝑐)/2𝑎 |
-| 3 | Not exposed AF - fallback to content. AFs have wrong media type. No Alt. | \|−1\| = 1 | Supplement: `WRONG_MEDIA`<br>Source: `application/x-tex` | – | No AF qualifies. Formula content is used. | \|−1\| = 1 |
-| 4 | Not exposed AF - fallback to content. Alternative present but ignored. No Alt. | (1234)(1101) = (1337) | Alternative: `application/mathml+xml`<br>Source: `application/x-tex` | – | Alternative ignored. Formula content used. | (1234)(1101) = (1337) |
-| 5 | Exposed AF despite Alt. Two valid AFs. | sin²𝜃 + cos²𝜃 = 1 | Supplement (x2): `application/mathml+xml` | Alternate text | Alt ignored, first AF content used. | `<math display="block"> <msup> ... </math>` |
-| 6 | Not exposed AF. Alt used. Two AFs: one invalid, one incomplete. | 2𝑥 + 𝑦 = 3; 𝑥 − 𝑦 = 0 | AF1 missing relationship<br>AF2: Source `application/x-tex` | Alternate | No AF qualifies. Alt text used. | Alternate |
-| 7 | Exposed AF + substructure processed. Valid Supplement present. | 𝑥 = 𝑦 = 1 | Supplement: `application/mathml+xml`<br>Source: `application/x-tex` | – | First AF used. Substructure (`Lbl`) processed. | `<math> <mi>...</mi> = ... </math>` |
+| 1 | Exposed AF. Two AFs: `Source` + `Supplement`. Mixed-case media type. No Alt. | 𝑎𝑥² + 𝑏𝑥 + 𝑐 = 0 | Supplement: `APPLICATION/mathml+xml`<br>Source: `application/x-tex` | – | Use first AF. Media type is case-insensitive. | `<math> <mi>...</mi> ... </math>` |
+| 2 | Not exposed AF. Fallback to content. Two AFs: Source (mathml), Supplement (tex). | 𝑥 = −𝑏 ± √(𝑏²−4𝑎𝑐) / 2𝑎 | Source: `application/mathml+xml`<br>Supplement: `application/x-tex` | – | No AF qualifies. Show formula content. | 𝑥 = −𝑏 ± √(𝑏²−4𝑎𝑐) / 2𝑎 |
+| 3 | Not exposed AF. Both AFs invalid. Fallback to content. | \|−1\| = 1 | Supplement: `WRONG_MEDIA`<br>Source: `application/x-tex` | – | No AF qualifies. Show formula content. | \|−1\| = 1 |
+| 4 | Not exposed AF. Alternative is ignored. | (1234)(1101) = (1337) | Alternative: `application/mathml+xml`<br>Source: `application/x-tex` | – | Alt ignored. Show formula content. | (1234)(1101) = (1337) |
+| 5 | Exposed AF despite Alt. Both AFs valid. | sin²𝜃 + cos²𝜃 = 1 | Supplement (x2): `application/mathml+xml` | Alternate text | Alt ignored. Show first AF content. | `<math display="block"> <msup> ... </math>` |
+| 6 | Not exposed AF. Alt is used. One AF invalid. | 2𝑥 + 𝑦 = 3; 𝑥 − 𝑦 = 0 | AF1 missing relationship<br>AF2: Source `application/x-tex` | Alternate | No AF qualifies. Show Alt. | Alternate |
+| 7 | Exposed AF + substructure processed. One valid AF. | 𝑥 = 𝑦 = 1 | Supplement: `application/mathml+xml`<br>Source: `application/x-tex` | – | Use first AF. Process `Lbl` substructure. | `<math> <mi>...</mi> = ... </math>` |
