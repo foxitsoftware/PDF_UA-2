@@ -15,7 +15,7 @@
        - **Relationship:** Source  
        - **Subtype:** application/x-tex
    - **Expected Result:** Should return the content of the first AF in the array. Media type is case-insensitive.
-   - **Value:**
+     - **Value:**
      ```xml
      <math> <mi>&#x1d44e;</mi> <mo>&#x2062;</mo> <msup> <mi>&#x1d465;</mi> <mn>2</mn> </msup> <mo>+</mo> <mi>&#x1d44f;</mi> <mo>&#x2062;</mo> <mi>&#x1d465;</mi> <mo>+</mo> <mi>&#x1d450;</mi> <mo>=</mo> <mn>0</mn> </math>
      ```
