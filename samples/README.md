@@ -20,7 +20,8 @@
      <math> <mi>&#x1d44e;</mi> <mo>&#x2062;</mo> <msup> <mi>&#x1d465;</mi> <mn>2</mn> </msup> <mo>+</mo> <mi>&#x1d44f;</mi> <mo>&#x2062;</mo> <mi>&#x1d465;</mi> <mo>+</mo> <mi>&#x1d450;</mi> <mo>=</mo> <mn>0</mn> </math>
      ```
 
-2. **Not exposed AF - content exposed, two AFs: `Source` with `application/mathml+xml`, `Supplement` with `application/x-tex`. No Alt present.**
+**Not exposed AF - content exposed**
+2. **Two AFs: `Source` with `application/mathml+xml`, `Supplement` with `application/x-tex`. No Alt present.**
    - **Formula:** 𝑥 = −𝑏 ± √(𝑏²−4𝑎𝑐) / 2𝑎
    - **AFs:**
      - **1.**
@@ -32,7 +33,8 @@
    - **Expected Result:** No AF meets criteria. No Alt present. Content under Formula structure should be returned.
    - **Value:** 𝑥 = −𝑏 ± √(𝑏²−4𝑎𝑐) / 2𝑎
 
-3. **Not exposed AF - content exposed, two AFs: Both have incorrect media types. No Alt present.**
+**Not exposed AF - content exposed**
+3. **Two AFs: Both have incorrect media types. No Alt present.**
    - **Formula:** |−1| = 1
    - **AFs:**
      - **1.**
@@ -44,7 +46,8 @@
    - **Expected Result:** No AF meets criteria. No Alt present. Content under Formula structure should be returned.
    - **Value:** |−1| = 1
 
-4. **Not exposed AF - content exposed, two AFs: `Source` and `Alternative`. `Alternative` has the correct media type. No Alt present.**
+**Not exposed AF - content exposed**
+4. **Two AFs: `Source` and `Alternative`. `Alternative` has the correct media type. No Alt present.**
    - **Formula:** (1234)(1101) = (1337)
    - **AFs:**
      - **1.**
@@ -56,7 +59,8 @@
    - **Expected Result:** Alternative relationship is not currently processed. Should be ignored.
    - **Value:** (1234)(1101) = (1337)
 
-5. **Exposed AF despite Alt present, two AFs: Both meet criteria. Alt is present.**
+**Exposed AF despite Alt present**
+5. **Two AFs: Both meet criteria. Alt is present.**
    - **Formula:** sin²𝜃 + cos²𝜃 = 1
    - **AFs:**
      - **1.**
@@ -72,7 +76,8 @@
      <math display="block"> <msup> <mi mathvariant="normal">sin</mi> <mn>2</mn> </msup> <mo rspace="0.167em">&#x2061;</mo> <mi>&#x1d703;</mi> <mo>+</mo> <msup> <mi mathvariant="normal">cos</mi> <mn>2</mn> </msup> <mo rspace="0.167em">&#x2061;</mo> <mi>&#x1d703;</mi> <mo>=</mo> <mn>1</mn> </math>
      ```
 
-6. **Not exposed AF, Alt taken instead, two AFs: None meet criteria. Alt is present.**
+**Not exposed AF, Alt taken instead**
+6. **Two AFs: None meet criteria. Alt is present.**
    - **Formula:** 2𝑥 + 𝑦 = 3; 𝑥 − 𝑦 = 0
    - **AFs:**
      - **1.**
@@ -85,7 +90,8 @@
    - **Expected Result:** No AF meets criteria. Alt text should be exposed.
    - **Value:** Alternate
 
-7. **Pass example, Exposed AS + subctructure to be processed, two AFs: One meets criteria. No Alt, but substructure present (e.g., `Lbl` with content ‘.’).**
+**Exposed AS + substructure to be processed**
+7. **Two AFs: One meets criteria. No Alt, but substructure present (e.g., `Lbl` with content ‘.’).**
    - **Formula:** 𝑥 = 𝑦 = 1
    - **AFs:**
      - **1.**
