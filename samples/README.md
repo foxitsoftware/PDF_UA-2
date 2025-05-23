@@ -20,6 +20,7 @@
      <math> <mi>&#x1d44e;</mi> <mo>&#x2062;</mo> <msup> <mi>&#x1d465;</mi> <mn>2</mn> </msup> <mo>+</mo> <mi>&#x1d44f;</mi> <mo>&#x2062;</mo> <mi>&#x1d465;</mi> <mo>+</mo> <mi>&#x1d450;</mi> <mo>=</mo> <mn>0</mn> </math>
      ```
 ---
+
 **Not exposed AF - content exposed**
 2. **Two AFs: `Source` with `application/mathml+xml`, `Supplement` with `application/x-tex`. No Alt present.**
    - **Formula:** 𝑥 = −𝑏 ± √(𝑏²−4𝑎𝑐) / 2𝑎
@@ -33,6 +34,7 @@
    - **Expected Result:** No AF meets criteria. No Alt present. Content under Formula structure should be returned.
    - **Value:** 𝑥 = −𝑏 ± √(𝑏²−4𝑎𝑐) / 2𝑎
 ---
+
 **Not exposed AF - content exposed**
 3. **Two AFs: Both have incorrect media types. No Alt present.**
    - **Formula:** |−1| = 1
