@@ -19,7 +19,7 @@
      ```xml
      <math> <mi>&#x1d44e;</mi> <mo>&#x2062;</mo> <msup> <mi>&#x1d465;</mi> <mn>2</mn> </msup> <mo>+</mo> <mi>&#x1d44f;</mi> <mo>&#x2062;</mo> <mi>&#x1d465;</mi> <mo>+</mo> <mi>&#x1d450;</mi> <mo>=</mo> <mn>0</mn> </math>
      ```
-
+---
 **Not exposed AF - content exposed**
 2. **Two AFs: `Source` with `application/mathml+xml`, `Supplement` with `application/x-tex`. No Alt present.**
    - **Formula:** 𝑥 = −𝑏 ± √(𝑏²−4𝑎𝑐) / 2𝑎
@@ -32,7 +32,7 @@
        - **Subtype:** application/x-tex
    - **Expected Result:** No AF meets criteria. No Alt present. Content under Formula structure should be returned.
    - **Value:** 𝑥 = −𝑏 ± √(𝑏²−4𝑎𝑐) / 2𝑎
-
+---
 **Not exposed AF - content exposed**
 3. **Two AFs: Both have incorrect media types. No Alt present.**
    - **Formula:** |−1| = 1
@@ -45,7 +45,7 @@
        - **Subtype:** application/x-tex
    - **Expected Result:** No AF meets criteria. No Alt present. Content under Formula structure should be returned.
    - **Value:** |−1| = 1
-
+---
 **Not exposed AF - content exposed**
 4. **Two AFs: `Source` and `Alternative`. `Alternative` has the correct media type. No Alt present.**
    - **Formula:** (1234)(1101) = (1337)
@@ -58,7 +58,7 @@
        - **Subtype:** application/x-tex
    - **Expected Result:** Alternative relationship is not currently processed. Should be ignored.
    - **Value:** (1234)(1101) = (1337)
-
+---
 **Exposed AF despite Alt present**
 5. **Two AFs: Both meet criteria. Alt is present.**
    - **Formula:** sin²𝜃 + cos²𝜃 = 1
@@ -75,7 +75,7 @@
      ```xml
      <math display="block"> <msup> <mi mathvariant="normal">sin</mi> <mn>2</mn> </msup> <mo rspace="0.167em">&#x2061;</mo> <mi>&#x1d703;</mi> <mo>+</mo> <msup> <mi mathvariant="normal">cos</mi> <mn>2</mn> </msup> <mo rspace="0.167em">&#x2061;</mo> <mi>&#x1d703;</mi> <mo>=</mo> <mn>1</mn> </math>
      ```
-
+---
 **Not exposed AF, Alt taken instead**
 6. **Two AFs: None meet criteria. Alt is present.**
    - **Formula:** 2𝑥 + 𝑦 = 3; 𝑥 − 𝑦 = 0
@@ -89,7 +89,7 @@
    - **Alt:** Alternate
    - **Expected Result:** No AF meets criteria. Alt text should be exposed.
    - **Value:** Alternate
-
+---
 **Exposed AS + substructure to be processed**
 7. **Two AFs: One meets criteria. No Alt, but substructure present (e.g., `Lbl` with content ‘.’).**
    - **Formula:** 𝑥 = 𝑦 = 1
