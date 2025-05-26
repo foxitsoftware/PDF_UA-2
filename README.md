@@ -35,7 +35,7 @@ In our PoC we use the second option.
 
 ## This is how you can meet MathML in special Foxit Editor build
 
-<img src="https://github.com/foxitsoftware/PDF_UA-2/blob/main/samples/Revised%20-%20Foxit%20Screen%20with%20MathML.jpg" alt="MathML" width="500">
+<img src="https://github.com/foxitsoftware/PDF_UA-2/blob/main/samples/Updated%20image%20to%20GitHub.jpg">
 
  
 ## Logic in providing Associated file
