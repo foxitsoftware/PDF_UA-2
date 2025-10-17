@@ -69,11 +69,11 @@ For *Formula* structure element:
 [//]: # (`ActualText` takes precedence over the processing of the structure element itself.)
 
 
-1. **Substructure Handling:**
+6. **Substructure Handling:**
    - If a suitable `AF` is found, process the substructure of the element and provide the content of the stream data as the textual value, i.e. only that content is replaced, not the substructure.
    - ~~If `ActualText` is present we ignore AFs and substructure. `ActualText` serves as a full replacement of structure element (this is true for all structure elements. `Formula` is no different)~~
 
-2. **Processing Formula Pseudocode**
+7. **Processing Formula Pseudocode**
 ```pseudo
 IF AF is present AND Namespace == 2.0 AND AFRelationship == Supplement AND Mediatype == application/mathml+xml THEN 
    // Only the first element that meets the criteria is used
