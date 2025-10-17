@@ -52,7 +52,7 @@ For *Formula* structure element:
 
 2. **AF Structure Handling:**
    - Accept both arrays and directories for AF. While PDF 2.0 officially allows only arrays, some files use AF as a dictionary.
-   - - Only the first element that meets the criteria is used
+     - Only the first element that meets the criteria is used
 
 3. **Fallback Mechanism:**
    - If no suitable AF entry is found proceed to process the children (kids) of the structure element.
@@ -62,10 +62,12 @@ For *Formula* structure element:
    - `AFRelationship == Alternative` is not yet implemented. The usage of this key is currently under discussion.
 
 5. **Priority Rules:**
+   - `InlineMath` has priority over `AF`
    - `AF` has priority over `Alt`.
    - `Alt` has priority over `ActualText`
 
 [//]: # (`ActualText` takes precedence over the processing of the structure element itself.)
+
 
 1. **Substructure Handling:**
    - If a suitable `AF` is found, process the substructure of the element and provide the content of the stream data as the textual value, i.e. only that content is replaced, not the substructure.
