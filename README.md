@@ -16,7 +16,7 @@ We are testing several AI approaches to help with automatic math recognition as 
 If you are interested in interoperable testing, have comments, or want to report a bug or suggestion, please use the Issues feature on GitHub.
 
 # PDF 2.0 and PDF/UA-2 features
-The ISO 32000-2:2020 (PDF 2.0) specification only provides file format requirements. It should give clear guidance for PDF creation tools. What should and should not be present in the compliant file, but it is not clear how the processor should use all that information. We use this GitHub repository to explain our reasoning with implementations and sample files so we can reach a consensus with other developers. It is essential to give end users the same experience when consuming PDF UA-2 files through AT to`ols.
+The ISO 32000-2:2020 (PDF 2.0) specification only provides file format requirements. It should give clear guidance for PDF creation tools. What should and should not be present in the compliant file, but it is not clear how the processor should use all that information. We use this GitHub repository to explain our reasoning with implementations and sample files so we can reach a consensus with other developers. It is essential to give end users the same experience when consuming PDF UA-2 files through AT tools.
 
 The following sections explain our implementation decisions. Feel free to comment.
 
