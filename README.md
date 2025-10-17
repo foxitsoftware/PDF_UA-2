@@ -70,6 +70,7 @@ For *Formula* structure element:
 
 
 6. **Substructure Handling:**
+   - If the Formula structure element contains a <math> element as a direct child (doesn't have to be the first one), then this substructure is used, and Alternate text (Alt) is ignored.
    - If a suitable `AF` is found, process the substructure of the element and provide the content of the stream data as the textual value, i.e. only that content is replaced, not the substructure.
    - ~~If `ActualText` is present we ignore AFs and substructure. `ActualText` serves as a full replacement of structure element (this is true for all structure elements. `Formula` is no different)~~
 
