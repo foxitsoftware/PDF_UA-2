@@ -1,7 +1,7 @@
-# TL;DR
+### TL;DR
 This repository outlines Foxit's Proof of Concept (PoC) implementation for creating and consuming PDF/UA-2 files, aiming to achieve interoperability and ensure end users have the same experience when consuming these files through Assistive Technology (AT) tools. In this case we focus on MathML.
 
-# Background
+### Background
 PDF/UA-2 files are normal PDF files provided by extra information that assistive software (like JAWS or NVDA) can use. This "extra information" are TAGs which tell things like: this is heading, this is a table with 3 columns or this is an image. In this Proof of Concept we cover math formulas that are much more complex and requires special handling. By covering math formulas we mean that formulas are accissible to assistive technology by:
 - using \<mathml\> elements or
 - using associated file that delivers
