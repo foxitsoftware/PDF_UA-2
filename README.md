@@ -6,11 +6,11 @@ PDF/UA-2 files are normal PDF files provided by extra information that assistive
 - using \<mathml\> elements or
 - using associated file that delivers
 
-## What is MathML
+### What is MathML
 - MathML is the digital language that allows computers and assistive technologies to understand the meaning of an equation, not just show a picture of it.
 - MathML is an important part of the PDF/UA-2 standard because it ensures that all mathematical content within a document is accessible and fully understood by assistive technologies
 
-# PDF/UA-2 — PDF for Universal Accessibility, ver. 2, ISO 14289-2
+## PDF/UA-2 — PDF for Universal Accessibility, ver. 2, ISO 14289-2
 Key points of UA-2:
 - Enhanced Accessibility
 - Semantic Information
@@ -32,7 +32,7 @@ The ISO 32000-2:2020 (PDF 2.0) specification only provides file format requireme
 
 The following sections explain our implementation decisions. Feel free to comment.
 
-## MathML
+### MathML
 
 PDF 2.0 in conjunction with PDF/UA-2 recognizes two methods of semantically denote math. Both methods require the use of *Formula* structure element and then:
 - Use \<mathml\> elements in the MathML namespace as direct children or
@@ -40,12 +40,12 @@ PDF 2.0 in conjunction with PDF/UA-2 recognizes two methods of semantically deno
 
 In our PoC we use the second option.  
 
-## A sample of a formula and associated file
+### A sample of a formula and associated file
 ![Sample of a formula](https://raw.githubusercontent.com/foxitsoftware/PDF_UA-2/main/samples/Simple%20formula.jpg)
 
 <img src="https://raw.githubusercontent.com/foxitsoftware/PDF_UA-2/main/samples/MathML%20sample.jpg" alt="MathML" width="500">
 
-## This is how you can meet MathML in special Foxit Editor build
+### This is how you can meet MathML in special Foxit Editor build
 
 <img src="https://github.com/foxitsoftware/PDF_UA-2/blob/main/samples/Updated%20image%20to%20GitHub.jpg">
 
