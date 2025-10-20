@@ -11,13 +11,19 @@ PDF/UA-2 files are normal PDF files provided by extra information that assistive
 - MathML is an important part of the PDF/UA-2 standard because it ensures that all mathematical content within a document is accessible and fully understood by assistive technologies
 
 ### PDF/UA-2 — PDF for Universal Accessibility, ver. 2, ISO 14289-2
-Key points of UA-2:
-- Enhanced Accessibility
-- Semantic Information
-- Compatibility with WCAG
-- New Tags and Features
+PDF/UA-2 is the set of precise technical rules that ensure that tagging is done correctly and consistently.
 
-Foxit's PoC implementation of various PDF creation and consumption tools
+Key points of PDF/UA-2:
+- Enhanced Accessibility
+-- It offers a more robust technical framework than its predecessor to ensure people using assistive technology can reliably access and interact with document content.
+- Semantic Information
+-- The standard introduces comprehensive requirements for structure element attributes, enabling a richer, machine-readable understanding of the document's logical meaning, not just its visual layout.
+- Compatibility with WCAG
+-- PDF/UA-2 is designed to work as a companion to the Web Content Accessibility Guidelines (WCAG), helping organizations meet broader, content-specific legal accessibility mandates.
+- New Tags and Features
+-- It incorporates new PDF 2.0-specific elements, like improved handling of mathematical notation (MathML) and better support for annotations, leading to more inclusive digital documents.
+
+### Foxit's PoC implementation of various PDF creation and consumption tools
   
 We provide [Installer](installer/README.md) for our PoC implementations.
 The [PDF Sample files](samples/README.md) we produced to achieve interoperability.
