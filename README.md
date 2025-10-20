@@ -50,7 +50,7 @@ In our PoC we use the second option.
 <img src="https://github.com/foxitsoftware/PDF_UA-2/blob/main/samples/Updated%20image%20to%20GitHub.jpg">
 
  
-## Logic in providing Associated file
+### Logic in providing Associated file
 
 PDF 2.0 doesn't provide any guidance regarding processors, so it's not specified how a processor should deal with specific scenarios. 
 
