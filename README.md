@@ -10,7 +10,7 @@ PDF/UA-2 files are normal PDF files provided by extra information that assistive
 - MathML is the digital language that allows computers and assistive technologies to understand the meaning of an equation, not just show a picture of it.
 - MathML is an important part of the PDF/UA-2 standard because it ensures that all mathematical content within a document is accessible and fully understood by assistive technologies
 
-## PDF/UA-2 — PDF for Universal Accessibility, ver. 2, ISO 14289-2
+### PDF/UA-2 — PDF for Universal Accessibility, ver. 2, ISO 14289-2
 Key points of UA-2:
 - Enhanced Accessibility
 - Semantic Information
@@ -27,7 +27,7 @@ We are testing several AI approaches to help with automatic math recognition as 
 
 If you are interested in interoperable testing, have comments, or want to report a bug or suggestion, please use the Issues feature on GitHub.
 
-# PDF 2.0 and PDF/UA-2 features
+## PDF 2.0 and PDF/UA-2 features
 The ISO 32000-2:2020 (PDF 2.0) specification only provides file format requirements. It should give clear guidance for PDF creation tools. What should and should not be present in the compliant file, but it is not clear how the processor should use all that information. We use this GitHub repository to explain our reasoning with implementations and sample files so we can reach a consensus with other developers. It is essential to give end users the same experience when consuming PDF UA-2 files through AT tools.
 
 The following sections explain our implementation decisions. Feel free to comment.
