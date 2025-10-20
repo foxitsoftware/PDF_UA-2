@@ -112,7 +112,10 @@ ELSE
     Provide content and process substructure
 ```
 
-## *Rolemap and RolemapNS Processing*
+### Rolemap and RolemapNS Processing
+Rolemap and RolemapNS Processing are technical rules used by software to correctly interpret the meaning of structural elements within a PDF document, ensuring that content is understandable and accessible, particularly when consumed by Assistive Technology (AT) tools.
+
+These processes act as translation guides, telling the PDF processor how to treat different kinds of tags or elements found in the document, especially those that might be custom or come from sources other than standard PDF specifications.
 
 1. **General Rolemap Handling:**
    - Process the `Rolemap` or `RolemapNS` on a Structure Element (SE) in a PDF, regardless of the PDF version.
